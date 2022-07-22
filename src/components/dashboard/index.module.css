@@ -1,0 +1,49 @@
+.dashboardContainer{
+    background: rgba(31, 39, 49, 1);
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+}
+
+.dashboard{
+    padding: 1.8rem;
+    background: rgba(16, 19, 23, 1);
+    border-radius: 1.6rem;
+    min-height: 80vh;
+    min-width: 92vw;
+    box-shadow: 0.2rem 0.3rem 4.2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.columnDesc{
+    display: grid;
+    grid-template-columns: 29% 18% 18% 18% 11%;
+    column-gap: 1.5%;
+    /* place-items: center; */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+
+.columnDesc div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+}
+
+/* .workIcon{
+    width: 3rem !important;
+    height: 3rem;
+    background: url('../../images/workoutIcon.svg') no-repeat center center;
+}
+
+.nutriIcon{
+    width: 3rem !important;
+    height: 3rem;
+    background: url('../../images/nutritionIcon.svg') no-repeat center center;
+} */
