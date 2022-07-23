@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 
@@ -7,6 +7,7 @@ import performedDate from "../../../images/performedDate.svg";
 import scheduledDate from "../../../images/scheduledDate.svg";
 import notifyIcon from "../../../images/notifyBell.svg";
 import Arrow from "../../../images/arrow.svg";
+import Exclaim from "../../../images/exclaimation.svg"
 
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -14,6 +15,9 @@ import "react-circular-progressbar/dist/styles.css";
 import { PieChart } from "react-minimal-pie-chart";
 
 const Row = (props) => {
+  const [nutriTarget,setNutriTarget] = useState(props.user.calorieTarget)
+  const [stepTarget,setStepTarget] = useState(props.user.stepsTarget)
+  
   return (
     <div className={styles.rowContainer}>
 
@@ -35,7 +39,7 @@ const Row = (props) => {
         <div className={styles.stepsProgressbar}>
           <CircularProgressbarWithChildren
             value={props.user.stepsWalked}
-            maxValue={props.user.stepsTarget * 1000}
+            maxValue={stepTarget * 1000}
             styles={buildStyles({
               rotation: 0.25,
               pathColor: 'rgba(127, 209, 140, 1)',
@@ -47,10 +51,13 @@ const Row = (props) => {
           </CircularProgressbarWithChildren>
         </div>
         <div>
-        <div className={styles.miniBtn}>+</div>
-          <h2>{props.user.stepsTarget}k</h2>
+        <div className={styles.miniBtn} onClick={()=>{
+          setStepTarget((prev)=>prev+0.5)}}>+</div>
+          <h2>{stepTarget}k</h2>
           <p>target</p>
-          <div className={styles.miniBtn}>-</div>
+          <div className={styles.miniBtn} onClick={()=>{
+            setStepTarget((prev)=>prev>0?prev-0.5:prev)
+          }}>-</div>
         </div>
       </div>
 
@@ -69,9 +76,11 @@ const Row = (props) => {
             <p>{props.user.scheduledDate}</p>
           </div>
         </div>
-        <Link to="/userId/workout" className={styles.sideBtn}>
-            <img src={Arrow} />
-        </Link>
+
+        {props.user.feedback?
+        <Link to="/userId/workout" className={styles.sideBtn}><img src={Arrow} /></Link>:
+        <Link to="/userId/workout" className={styles.sideBtn} style={{background: 'rgba(204, 56, 56, 1)'}}><img src={Exclaim} /></Link>
+        }
         {/* <input type="button" className={styles.sideBtn} value=">" /> */}
       </div>
 
@@ -118,10 +127,13 @@ const Row = (props) => {
           viewBoxSize={[100, 100]}
         />
         <div>
-        <div className={styles.miniBtn} onClick={()=>props.addCalorieTarget(props.user.userid,0.5)}>+</div>
-          <h2>{props.user.calorieTarget}k</h2>
+        <div className={styles.miniBtn} onClick={()=>{
+          setNutriTarget((prev)=>parseFloat((prev+0.1).toFixed(1)))}}>+</div>
+          <h2>{nutriTarget}k</h2>
           <p>target</p>
-          <div className={styles.miniBtn}>-</div>
+          <div className={styles.miniBtn} onClick={()=>{
+            setNutriTarget((prev)=>prev>0?parseFloat((prev-0.1).toFixed(1)):prev)
+          }}>-</div>
         </div>
         <Link to='/userId/nutrition' className={styles.sideBtn}>
             <img src={Arrow} />
