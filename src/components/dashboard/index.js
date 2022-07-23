@@ -58,10 +58,14 @@ const Dashboard = () => {
       carbConsumed: 50,
       carbTarget: 70,
       fatConsumed: 30,
-      fatTarget: 70
+      fatTarget: 70,
     },
   ];
-
+  const addCalorieTarget= (userid, val) => {
+    const index = users.findIndex(ob => ob.userid==userid);
+    users[index].calorieTarget=users[index].calorieTarget+val;
+    console.log(users[index])
+  }
   return (
     <div className={styles.dashboardContainer}>
         <div className={styles.dashboard}>
@@ -82,7 +86,7 @@ const Dashboard = () => {
                   <h2>Nutrition</h2>
                 </div>
             </div>
-            {users.map((user) => <Row key={user.userid} user={user}/>)}
+            {users.map((user) => <Row key={user.userid} user={user} addCalorieTarget={addCalorieTarget}/>)}
         </div>
     </div>
   );

@@ -20,12 +20,10 @@
     display: grid;
     grid-template-columns: 29% 18% 18% 18% 11%;
     column-gap: 1.5%;
-    /* place-items: center; */
-    font-family: 'Montserrat';
-    font-style: normal;
+    margin: 1rem 0 3rem;
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 2.2rem;
+    line-height: 2rem;
 }
 
 .columnDesc div{

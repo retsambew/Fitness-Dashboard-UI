@@ -7,27 +7,32 @@
     margin: 2rem 0;
 }
 
+
+/* User Info */
+
 .user{
     display: flex;
     align-items: center;
 }
 
 .user img{
-    padding: 1.8rem 1.8rem 1.8rem 1.1rem;
+    margin: 0rem 1.1rem 0 1.1rem ;
 }
 
 .user span h2{
-    font-family: Montserrat;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 450;
 }
 
 .user span h3{
-    font-family: Montserrat;
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-top: 0.1rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.3rem;
 }
+
+
+/* Steps Component */
 
 .steps{
     display: flex;
@@ -35,35 +40,102 @@
     justify-content: center;
     gap: 1.5rem;
     text-align: center;
-    font-family: 'Montserrat';
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     line-height: 2rem;
 }
 
 .stepsProgressbar{
-    height: 6rem;
-    width: 6rem;
+    height: 7rem;
+    width: 7rem;
     margin: 0.8rem;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.8rem;
 }
 
 .stepsProgressbar p{
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     line-height: 1.2rem;
 }
 
+
+/* Workout Component */
+
 .workout{
-    background: yellow;
-    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
+.workoutDate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    padding: 0.5rem;
+    font-size: 1.85rem;
+    font-weight: 600;
+}
+
+/* Nutrition Component */
+
 .nutrition{
-    background: lime;
-    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+/* Notify Button */
+
+.notifySection{
+    display: grid;
+    place-items: center;
 }
 
 .notifyBtn{
-    background: green;
-    height: 2vh;
+    display: grid;
+    place-items: center;
+    background: rgba(54, 245, 199, 1);
+    border-radius: 0.8rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    cursor: pointer;
+}
+
+.notifyBtn:hover{
+    background: rgb(54, 232, 245);
+    transform: scale(1.06);
+}
+
+/* Other Buttons */
+
+.sideBtn{
+    display: grid;
+    place-items: center ;
+    background: rgba(16, 19, 23, 1);
+    border-radius: 0.8rem;
+    height: 82%;
+    width: 3.8rem;
+    cursor: pointer;
+    box-shadow: 0.3rem 0.2rem 0.3rem rgba(16, 19, 23, 0.78);
+}
+
+.sideBtn:hover{
+    transform: translateX(-0.1rem);
+    box-shadow: 0.4rem 0.4rem 0.4rem rgba(16, 19, 23, 0.78);
+}
+
+.miniBtn{
+    background: rgba(16, 19, 23, 1);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    width: 4rem;
+    height: 2.2rem;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0.5rem;
 }
