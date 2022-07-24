@@ -34,18 +34,6 @@
     gap: 1.1rem;
 }
 
-/* .workIcon{
-    width: 3rem !important;
-    height: 3rem;
-    background: url('../../images/workoutIcon.svg') no-repeat center center;
-}
-
-.nutriIcon{
-    width: 3rem !important;
-    height: 3rem;
-    background: url('../../images/nutritionIcon.svg') no-repeat center center;
-} */
-
 @media(max-width:720px){
     .columnDesc{
         grid-template-columns: 0% 30% 29% 34%;

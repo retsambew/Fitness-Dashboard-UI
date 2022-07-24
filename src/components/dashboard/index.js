@@ -14,7 +14,7 @@ const Dashboard = () => {
       stepsWalked: 2547,
       stepsTarget: 4,
       performedDate: "15 Oct",
-      scheduledDate: "22 Oct",
+      scheduledDate: "27 Oct",
       calorieIntake: 2547,
       calorieTarget: 2.5,
       proteinConsumed: 45,
@@ -33,7 +33,7 @@ const Dashboard = () => {
       stepsWalked: 2547,
       stepsTarget: 4,
       performedDate: "15 Oct",
-      scheduledDate: "22 Oct",
+      scheduledDate: "29 Oct",
       calorieIntake: 2547,
       calorieTarget: 2.5,
       proteinConsumed: 45,
@@ -52,7 +52,7 @@ const Dashboard = () => {
       stepsWalked: 2547,
       stepsTarget: 4,
       performedDate: "15 Oct",
-      scheduledDate: "22 Oct",
+      scheduledDate: "30 Oct",
       calorieIntake: 2547,
       calorieTarget: 2.5,
       proteinConsumed: 45,
@@ -65,6 +65,7 @@ const Dashboard = () => {
     },
   ];
 
+  // Like this we can change the value in object after passing it through props.
   // const addCalorieTarget= (userid, val) => {
   //   const index = users.findIndex(ob => ob.userid==userid);
   //   users[index].calorieTarget=users[index].calorieTarget+val;
@@ -74,6 +75,8 @@ const Dashboard = () => {
   return (
     <div className={styles.dashboardContainer}>
         <div className={styles.dashboard}>
+            
+            {/* Column Description */}
             <div className={styles.columnDesc}>
                 <div/>
                 <div>
@@ -89,6 +92,8 @@ const Dashboard = () => {
                   <h2>Nutrition</h2>
                 </div>
             </div>
+            
+            {/* Columns */}
             {users.map((user) => <Row key={user.userid} user={user}/>)}
         </div>
     </div>

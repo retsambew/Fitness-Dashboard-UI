@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./tooltip.module.css";
 
 const tooltip = (props) => {
-  // Percent of target achieved
+  // Percent of target achieved and stopping the bar to increase above 100.
   const protPercent=((props.user.proteinConsumed/props.user.proteinTarget)*100);
   const protWidth=protPercent>100?100:protPercent;
   const fatPercent=((props.user.fatConsumed/props.user.fatTarget)*100);

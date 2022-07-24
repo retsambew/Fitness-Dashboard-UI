@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React, useEffect, useState} from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 import Tooltip from './tooltip'
@@ -16,10 +16,24 @@ import "react-circular-progressbar/dist/styles.css";
 import { PieChart } from "react-minimal-pie-chart";
 
 const Row = (props) => {
+
+  // Variable Target. We can change it in Object too by passing setter through props.
   const [nutriTarget,setNutriTarget] = useState(props.user.calorieTarget)
   const [stepTarget,setStepTarget] = useState(props.user.stepsTarget)
+
+  // Toottip
   const [hovered,setHover]=useState(false);
   const tooltip=hovered?<Tooltip user={props.user}/>:'';
+
+  // Date Check
+  const [isToday, setDate]=useState('');
+  useEffect(()=>{
+    if(new Date().getDate()==props.user.scheduledDate.split(' ')[0])
+      setDate(styles.redDate);
+    else
+      setDate('')
+  })
+
   return (
     <div className={styles.rowContainer}>
 
@@ -73,7 +87,7 @@ const Row = (props) => {
             <img src={performedDate} />
             {props.user.performedDate}
           </div>
-          <div className={styles.workoutDate}>
+          <div className={`${styles.workoutDate} ${isToday}`}>
             <img src={scheduledDate} />
             <p>{props.user.scheduledDate}</p>
           </div>

@@ -77,6 +77,11 @@
     font-weight: 600;
 }
 
+.redDate{
+    background: rgba(204, 56, 56, 1);
+    border-radius: 0.8rem;
+}
+
 /* Nutrition Component */
 
 .nutrition{
