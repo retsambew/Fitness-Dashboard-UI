@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.c1a3ec00.css",
-    "main.js": "/static/js/main.47fa1b62.js",
-    "static/media/user.svg": "/static/media/user.9bfd82a78f9f9426956d0943e106d4ee.svg",
-    "static/media/workoutIcon.svg": "/static/media/workoutIcon.6a23ec421bb2ff2baedd8f64ca78fa83.svg",
-    "static/media/performedDate.svg": "/static/media/performedDate.c23cb71ccdb0a85ad944f9f2467bb206.svg",
-    "static/media/stepsIcon.svg": "/static/media/stepsIcon.d8a22505d4729aa4b1932e1e3e601ee9.svg",
-    "static/media/notifyBell.svg": "/static/media/notifyBell.51e4a6891c2f9cff73bc7cd840b6601f.svg",
-    "static/media/scheduledDate.svg": "/static/media/scheduledDate.b3328237c950b8145bb65b88b84bb6a9.svg",
-    "static/media/exclaimation.svg": "/static/media/exclaimation.9a7393183dd5f2e6ef3946382ac70a0b.svg",
-    "static/media/arrow.svg": "/static/media/arrow.f10b98d2cce91768886304fcc8964a69.svg",
-    "index.html": "/index.html",
-    "static/media/nutritionIcon.svg": "/static/media/nutritionIcon.163d31a2fe28682f3051ff45ecf41ea1.svg",
-    "main.c1a3ec00.css.map": "/static/css/main.c1a3ec00.css.map",
-    "main.47fa1b62.js.map": "/static/js/main.47fa1b62.js.map"
+    "main.css": "/Fitness-Dashboard-UI/static/css/main.c1a3ec00.css",
+    "main.js": "/Fitness-Dashboard-UI/static/js/main.1c1a06fe.js",
+    "static/media/user.svg": "/Fitness-Dashboard-UI/static/media/user.9bfd82a78f9f9426956d0943e106d4ee.svg",
+    "static/media/workoutIcon.svg": "/Fitness-Dashboard-UI/static/media/workoutIcon.6a23ec421bb2ff2baedd8f64ca78fa83.svg",
+    "static/media/performedDate.svg": "/Fitness-Dashboard-UI/static/media/performedDate.c23cb71ccdb0a85ad944f9f2467bb206.svg",
+    "static/media/stepsIcon.svg": "/Fitness-Dashboard-UI/static/media/stepsIcon.d8a22505d4729aa4b1932e1e3e601ee9.svg",
+    "static/media/notifyBell.svg": "/Fitness-Dashboard-UI/static/media/notifyBell.51e4a6891c2f9cff73bc7cd840b6601f.svg",
+    "static/media/scheduledDate.svg": "/Fitness-Dashboard-UI/static/media/scheduledDate.b3328237c950b8145bb65b88b84bb6a9.svg",
+    "static/media/exclaimation.svg": "/Fitness-Dashboard-UI/static/media/exclaimation.9a7393183dd5f2e6ef3946382ac70a0b.svg",
+    "static/media/arrow.svg": "/Fitness-Dashboard-UI/static/media/arrow.f10b98d2cce91768886304fcc8964a69.svg",
+    "index.html": "/Fitness-Dashboard-UI/index.html",
+    "static/media/nutritionIcon.svg": "/Fitness-Dashboard-UI/static/media/nutritionIcon.163d31a2fe28682f3051ff45ecf41ea1.svg",
+    "main.c1a3ec00.css.map": "/Fitness-Dashboard-UI/static/css/main.c1a3ec00.css.map",
+    "main.1c1a06fe.js.map": "/Fitness-Dashboard-UI/static/js/main.1c1a06fe.js.map"
   },
   "entrypoints": [
     "static/css/main.c1a3ec00.css",
-    "static/js/main.47fa1b62.js"
+    "static/js/main.1c1a06fe.js"
   ]
 }
