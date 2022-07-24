@@ -1,6 +1,7 @@
 import {React, useState} from "react";
 import { Link } from "react-router-dom";
 import styles from "./index.module.css";
+import Tooltip from './tooltip'
 
 import UserImg from "../../../images/user.svg";
 import performedDate from "../../../images/performedDate.svg";
@@ -17,7 +18,8 @@ import { PieChart } from "react-minimal-pie-chart";
 const Row = (props) => {
   const [nutriTarget,setNutriTarget] = useState(props.user.calorieTarget)
   const [stepTarget,setStepTarget] = useState(props.user.stepsTarget)
-  
+  const [hovered,setHover]=useState(false);
+  const tooltip=hovered?<Tooltip user={props.user}/>:'';
   return (
     <div className={styles.rowContainer}>
 
@@ -89,6 +91,7 @@ const Row = (props) => {
       {/* Nutrition Section */}
 
       <div className={styles.nutrition}>
+        <div onMouseEnter={()=>setHover(true)} onMouseLeave={()=>setHover(false)} className={styles.pieChart}>
         <PieChart
           data={[
             {
@@ -104,7 +107,6 @@ const Row = (props) => {
             { title: "Fats", value: props.user.fatConsumed, color: "#03C7FC" },
           ]}
           lineWidth={25}
-          style={{ height: "7rem", width: "7rem", margin: "0.8rem" }}
           label={(dataEntry) => (
             <text
               x={50}
@@ -126,6 +128,8 @@ const Row = (props) => {
           center={[50, 50]}
           viewBoxSize={[100, 100]}
         />
+        {tooltip}
+        </div>
         <div>
         <div className={styles.miniBtn} onClick={()=>{
           setNutriTarget((prev)=>parseFloat((prev+0.1).toFixed(1)))}}>+</div>

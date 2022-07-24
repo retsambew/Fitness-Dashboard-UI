@@ -18,7 +18,7 @@
 
 .columnDesc{
     display: grid;
-    grid-template-columns: 29% 18% 18% 18% 11%;
+    grid-template-columns: 27% 18% 17% 21% 11%;
     column-gap: 1.5%;
     margin: 1rem 0 3rem;
     font-size: 1.8rem;
@@ -45,3 +45,9 @@
     height: 3rem;
     background: url('../../images/nutritionIcon.svg') no-repeat center center;
 } */
+
+@media(max-width:720px){
+    .columnDesc{
+        grid-template-columns: 0% 30% 29% 34%;
+    }
+}

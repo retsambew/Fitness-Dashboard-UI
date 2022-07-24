@@ -18,3 +18,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media(max-width:1050px){
+  html{
+    font-size: 54%;
+  }
+}
+
+@media(max-width:900px){
+  html{
+    font-size: 42%;
+  }
+}
+
+@media(max-width:720px){
+  html{
+    font-size: 42%;
+  }
+}
+
+@media(max-width:480px){
+  html{
+    font-size: 30%;
+  }
+}
